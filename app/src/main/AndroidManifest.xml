@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +15,16 @@
         android:theme="@style/Theme.QuizMate"
         tools:targetApi="31">
         <activity
+            android:name=".auth.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".user.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".main.UserMainActivity"
+            android:name=".main.GuestMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.GuestMainActivity"
+            android:name=".main.UserMainActivity"
             android:exported="false" />
         <activity
             android:name=".quiz.AddQuizActivity"
@@ -37,8 +45,15 @@
             android:name=".auth.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".auth.ChangePasswordActivity"
-            android:exported="true" />
+            android:name=".auth.ChangePasswordActivity"/>
+<!--            android:theme="@style/CustomDialogTheme" />-->
+        <activity android:name=".auth.ForgotPasswordActivity"
+            android:theme="@style/CustomDialogTheme"/>
+        <activity android:name=".quiz.question.ViewQuestionsActivity" />
+        <activity android:name=".quiz.question.EditQuestionActivity"
+            android:theme="@style/CustomDialogTheme"/>
+        <activity android:name=".quiz.question.AddQuestionActivity"
+            android:theme="@style/CustomDialogTheme"/>
     </application>
 
 </manifest>

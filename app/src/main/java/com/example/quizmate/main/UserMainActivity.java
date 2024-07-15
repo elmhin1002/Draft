@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quizmate.R;
 import com.example.quizmate.adapter.QuizAdapter;
+import com.example.quizmate.auth.ProfileActivity;
 import com.example.quizmate.entity.Quiz;
 import com.example.quizmate.quiz.question.AddQuestionActivity;
 import com.example.quizmate.user.UserActivity;
@@ -66,7 +67,7 @@ public class UserMainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.navigation_user) {
                     // Start UserActivity to show user details
-                    startActivity(new Intent(UserMainActivity.this, UserActivity.class));
+                    startActivity(new Intent(UserMainActivity.this, ProfileActivity.class));
                     return true;
                 } else {
                     return false;

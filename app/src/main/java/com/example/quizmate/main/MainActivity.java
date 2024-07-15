@@ -1,5 +1,6 @@
-package com.example.quizmate.user;
+package com.example.quizmate.main;
 
+import android.app.Application;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,14 +10,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.quizmate.R;
+import com.google.firebase.FirebaseApp;
 
-public class UserActivity extends AppCompatActivity {
-
+public class MainActivity extends Application {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_user);
-
+    public void onCreate() {
+        super.onCreate();
+        FirebaseApp.initializeApp(this);
     }
 }

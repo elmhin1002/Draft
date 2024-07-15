@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="160dp"
@@ -16,6 +17,7 @@
         android:backgroundTint="@color/blue"
         android:padding="8dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +29,6 @@
 
     </LinearLayout>
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,6 +37,7 @@
         android:backgroundTint="@color/white"
         android:padding="8dp"
         android:orientation="vertical">
+
         <ProgressBar
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -48,7 +50,5 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:id="@+id/recycler_view"/>
-
     </RelativeLayout>
-
 </LinearLayout>
